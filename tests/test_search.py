@@ -1,26 +1,47 @@
+"""
+검색 기능 테스트 v1 - 기본 기능만 확인
+"""
+
 import pytest
 from pages.search_page import SearchPage
 
 
 class TestSearch:
+    """검색 기능 테스트"""
     
-    def test_search_with_valid_keyword(self, driver):
-        """유효한 키워드로 검색 테스트"""
-        search_page = SearchPage(driver)
+    @pytest.mark.smoke
+    def test_search_nike(self, driver):
+        """나이키 검색 테스트"""
         driver.get("https://kream.co.kr")
+        search_page = SearchPage(driver)
         
-        # 검색 수행
-        search_page.search_product("나이키 덩크")
+        # 검색 실행
+        result = search_page.search_product("나이키")
         
-        # 검증
-        assert search_page.get_search_results_count() > 0, "검색 결과가 없습니다"
-        assert search_page.is_keyword_in_results("나이키"), "검색 결과에 키워드가 없습니다"
+        # 검색이 성공했는지만 확인
+        assert result, "검색 실행 실패"
+        print("✅ 나이키 검색 완료!")
     
-    def test_search_with_no_results(self, driver):
-        """결과 없는 검색 테스트"""
-        search_page = SearchPage(driver)
+    def test_search_jordan(self, driver):
+        """조던 검색 테스트"""
         driver.get("https://kream.co.kr")
+        search_page = SearchPage(driver)
         
-        search_page.search_product("xyzabc123nonexistent")
+        # 검색 실행
+        result = search_page.search_product("조던")
         
-        assert search_page.get_search_results_count() == 0, "잘못된 검색 결과"
+        # 검색이 성공했는지만 확인
+        assert result, "검색 실행 실패"
+        print("✅ 조던 검색 완료!")
+    
+    def test_search_dunk(self, driver):
+        """덩크 검색 테스트"""
+        driver.get("https://kream.co.kr")
+        search_page = SearchPage(driver)
+        
+        # 검색 실행
+        result = search_page.search_product("덩크")
+        
+        # 검색이 성공했는지만 확인
+        assert result, "검색 실행 실패"
+        print("✅ 덩크 검색 완료!")

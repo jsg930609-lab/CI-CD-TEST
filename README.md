@@ -1,0 +1,1 @@
+![CI/CD](https://github.com/jsg930609-lab/CI-CD-TEST/workflows/Selenium%20Tests%20CI/CD/badge.svg)

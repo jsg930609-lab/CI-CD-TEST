@@ -1,0 +1,8 @@
+# .gitignore
+.env
+*.env
+.env.local
+.env.production
+
+*.pkl
+kream_cookies.pkl

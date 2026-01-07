@@ -6,3 +6,8 @@
 
 *.pkl
 kream_cookies.pkl
+
+*md
+step1_basic_guide.md
+step2_intermediate_guide.md
+step3_framework_guide.md

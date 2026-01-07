@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KREAM Automation Test Reports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #10b981;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .report-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .report-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .report-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .info-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .info-item {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .info-item strong {
+            color: #333;
+        }
+        
+        .github-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .github-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Reports</h1>
+        <p class="subtitle">KREAM Selenium Automation</p>
+        <span class="badge">✅ CI/CD Active</span>
+        
+        <div class="report-card">
+            <h2>📊 Latest Test Report</h2>
+            <p style="margin-bottom: 15px; color: #666;">
+                가장 최근 테스트 실행 결과를 확인하세요.
+            </p>
+            <a href="report.html" class="report-link">📄 View Report</a>
+        </div>
+        
+        <div class="info-section">
+            <div class="info-item">
+                <strong>🚀 자동 배포:</strong> GitHub Actions를 통해 자동으로 업데이트됩니다
+            </div>
+            <div class="info-item">
+                <strong>🔄 업데이트:</strong> main 브랜치에 push할 때마다 자동 실행
+            </div>
+            <div class="info-item">
+                <strong>🐍 Python:</strong> 3.9, 3.10, 3.11 멀티 버전 테스트
+            </div>
+            <div class="info-item">
+                <strong>🛠️ 기술:</strong> Selenium, pytest, GitHub Actions
+            </div>
+            
+            <a href="https://github.com/jsg930609-lab/CI-CD-TEST" class="github-link">
+                → GitHub Repository
+            </a>
+        </div>
+    </div>
+</body>
+</html>
